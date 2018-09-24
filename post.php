@@ -44,10 +44,31 @@ body {font-family: "Lato", sans-serif}
               <p><b>nostrud exercitation ullamco laboris nisi ut aliquip</b></p>   
             </div>
         </header>
+<?php
+    function getPostDetailsFromDatabase () {
+      // TODO in Module 4
+      // get this data from a database instead of hardcoding it
+      $postDetails = array('title' => 'Blog Post 1',
+      'content' => 'My first blog post',
+      'date' => 'christikaes');
+
+      return $postDetails;
+    }
+?>
+
+<?php
+      // Post details contains all the data to generate the blog from
+      $postDetails = getPostDetailsFromDatabase();
+?>
+<h1> <?php echo $postDetails["title"]; ?> </h1>
+<div> <?php echo $postDetails["author"]; ?> </div>
+<div> <?php echo $postDetails["date"]; ?> </div>
+<div> <?php echo $postDetails["content"]; ?> </div>
+
 <main>
         <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
         <div class="w3-container w3-white">
-                <p style="text-align:justify"><b>Post title</b></p>
+                <h1 style="text-align:justify"><b>Post title</b></h1>
                 <p style="text-align:justify"class="w3-opacity">November 27, 2016</p>
                 <p class="w3-justify">Content. Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
                 <p class="w3-justify">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
