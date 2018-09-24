@@ -1,34 +1,13 @@
+<?php
+include 'nav.php';
 ?>
 
-function () {
-    include 'header.php';
-}
+<?php
+include 'header.php';
 ?>
-<!DOCTYPE html>
-<html>
-<title>Impressionism</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
-
-<body>         
         <!-- Page content -->
+        <main>
         <!--getPostTitlesFromDatabase:
-        <?php
-        function getPostTitlesFromDatabase() {
-          // TODO in Module 4
-          // get this data from a database instead of hardcoding it
-          $postTitles = array("Blog Post 1", "Blog Post 2", "Blog Post 3");
-          return $postTitles;
-          }
-        ?>
-
         <ul>
         <?php
             $postTitles = getPostTitlesFromDatabase();
@@ -39,7 +18,6 @@ body {font-family: "Lato", sans-serif}
           ?>
         </ul>
 
-        <main>
         <div class="w3-content" style="max-width:2000px;margin-top:46px">
         <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
             <h2 class="w3-wide">Hello World</h2>
@@ -70,10 +48,6 @@ body {font-family: "Lato", sans-serif}
         
         </main>
         
-        <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-                <p class="w3-medium">Website by: Josh Bell</p>
-                 <p class="w3-medium">Contact me via email: <a href="mailto:jbell14@lesley.edu">jbell14@lesley.edu</a>.</p>
-        </footer>
-        
+     
         </body>
         </html>
