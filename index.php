@@ -52,9 +52,10 @@ body {font-family: "Lato", sans-serif}
           // TODO in Module 4
           // get this data from a database instead of hardcoding it
           $postTitles = array("Blog Post 1", "Blog Post 2", "Blog Post 3");
-          return $postTitles
-        }
+          return $postTitles;
+          }
         ?>
+
         <ul>
           <?php
             $postTitles = getPostTitlesFromDatabase();
@@ -63,7 +64,8 @@ body {font-family: "Lato", sans-serif}
                 echo "<li><a href='post.php?title=" . $postTitle . "'>" . $postTitle ."</a></li>"
             }
           ?>
-        </ul>-->
+        </ul>
+
         <main>
         <div class="w3-content" style="max-width:2000px;margin-top:46px">
         <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
