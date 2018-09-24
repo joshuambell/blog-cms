@@ -57,11 +57,11 @@ body {font-family: "Lato", sans-serif}
         ?>
 
         <ul>
-          <?php
+        <?php
             $postTitles = getPostTitlesFromDatabase();
 
-            foreach($postTitles as $postTitle) {
-                echo "<li><a href='post.php?title=" . $postTitle . "'>" . $postTitle ."</a></li>"
+            foreach($postTitles as $postTitle) [
+                echo "<li><a href='post.php?title=" . $postTitle . "'>" . $postTitle . "</a></li>";
             }
           ?>
         </ul>
