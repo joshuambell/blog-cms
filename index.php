@@ -7,7 +7,7 @@ include 'header.php';
 ?>
 
 <?php
-  include 'includes/db_connect.php';
+  include_once 'includes/db_connect.php';
 ?>
         <!-- Page content -->
         <main>
@@ -63,7 +63,7 @@ include 'header.php';
         
         </main>
 
-        <?php
+ <?php
   include 'footer.php';
 ?>
      

@@ -1,4 +1,4 @@
-?php>
+<?php
 $dbServername = blog_cms
 ?>
 
