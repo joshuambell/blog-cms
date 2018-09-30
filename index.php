@@ -6,10 +6,6 @@ include 'nav.php';
 include 'header.php';
 ?>
 
-<?php
-  include_once 'db_connect.php';
-?>
-
 <main>
         <!-- Page content -->
 
