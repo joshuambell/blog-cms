@@ -1,47 +1,34 @@
+<?php
+include 'nav.php';
 ?>
 
-function () {
-    include 'header.php';
-}
+<?php
+include 'header.php';
 ?>
-<!DOCTYPE html>
-<html>
-<title>Impressionism</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
-
-<!DOCTYPE html>
-<html>
-<title>Impressionism</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
-<body>
-
 
 <?php
     function getPostDetailsFromDatabase () {
-      // TODO in Module 4
+      // Get the post title
+      $postTitle = rawurldecode($_GET['title']);
+
+      //Get the post that matches the postTitle
+      include_once 'includes/db_connect.php';
+      $sql = "SELECT * FROM posts WHERE title=" .$postTitle . "'";
+      $result = mysqli_query($conn,$sql);
+
+      //Get the first row from the result as an associative array
+      $postDetails = mysqli_fetch_assoc(Sresult);
+      return $postDetails;
+      ]
       // get this data from a database instead of hardcoding it
       $postDetails = array('title' => 'Blog Post 1',
       'content' => 'My first blog post',
-      'date' => 'christikaes');
+      'date' => '01/01/2018');
+      'author' => 'christikaes');
 
       return $postDetails;
     }
+    
 ?>
 
 <?php
