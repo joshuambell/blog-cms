@@ -15,11 +15,11 @@ include 'header.php';
 
         <!--getPostTitlesFromDatabase:
 
-        <?php
+<?php
         function getPostDetailsFromDatabase() {
       // Get all the post titles from the posts table
-      include_once 'db_connect.php'
-      $sql= "SELECT title FROM posts";
+      include_once 'db_connect.php';
+      $sql = "SELECT title FROM posts";
       $result = mysqli_query($conn,$sql);
    
       //Get each result row as an assoc array, then add title to $postTitles
@@ -29,6 +29,7 @@ include 'header.php';
       }
       return $postTitles;
 }
+?>
 
         <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
             <h2 class="w3-wide">Hello World</h2>
