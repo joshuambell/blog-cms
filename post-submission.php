@@ -47,6 +47,7 @@ include 'header.php';
                                    <form action="/action_page.php" target="_blank">
                                      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
                                        <div class="w3-half">
+                                       <form action="submit-post.php" method='POST'>...</form>
                                          <input class="w3-input w3-border" type="text" placeholder="Title" required name="Title">
                                        </div>
                                        <div class="w3-half">
