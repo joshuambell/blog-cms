@@ -12,23 +12,14 @@ include 'header.php';
       $postTitle = rawurldecode($_GET['title']);
 
       //Get the post that matches the postTitle
-      include_once 'includes/db_connect.php';
+      include 'includes/db_connect.php';
       $sql = "SELECT * FROM posts WHERE title=" .$postTitle . "'";
       $result = mysqli_query($conn,$sql);
 
       //Get the first row from the result as an associative array
-      $postDetails = mysqli_fetch_assoc(Sresult);
-      return $postDetails;
-      ]
-      // get this data from a database instead of hardcoding it
-      $postDetails = array('title' => 'Blog Post 1',
-      'content' => 'My first blog post',
-      'date' => '01/01/2018');
-      'author' => 'christikaes');
-
+      $postDetails = mysqli_fetch_assoc($result);
       return $postDetails;
     }
-    
 ?>
 
 <?php
