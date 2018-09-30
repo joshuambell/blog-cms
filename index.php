@@ -16,9 +16,16 @@ include 'header.php';
 
         <?php
            function getPostTitlesFromDatabase () {
-            // TODO in Module 4
-            // get this data from a database instead of hardcoding it
-            $postTitles = array ("Blog Post #1", "Blog Post #2", "Blog Post #3");
+            // Get all the post titles from posts table
+          include_once'includes/db_connect.php';
+          $sql = "SELECT title FROM posts";
+          $result = mysqli_query($conn, $sql);
+
+          //Get each result row as an assoc array, then add title to $postTitles
+          $postTitles = array ();
+          while($row = mysqli_fetch_assoc($result)){
+            array_push($postTitles, $row['title']);
+          }
             return $postTitles;
            }
         
