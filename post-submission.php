@@ -1,4 +1,8 @@
 <?php
+  include_once 'db_connect.php';
+?>
+
+<?php
 
 function () {
     include 'header.php';
@@ -12,9 +16,6 @@ function () {
 }
 ?>
 
-<?php
-  include_once 'db_connect.php';
-?>
 
         <!-- Page content -->
         <main>
