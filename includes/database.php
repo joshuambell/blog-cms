@@ -1,2 +1,0 @@
-?>
-$dbServername = blog_cms

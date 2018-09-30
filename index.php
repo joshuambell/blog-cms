@@ -1,6 +1,9 @@
 <?php
 include 'nav.php';
 ?>
+<?php
+  include_once'includes/db_connect.php';
+?>
 
 <?php
 include 'header.php';
@@ -8,6 +11,17 @@ include 'header.php';
         <!-- Page content -->
         <main>
         <!--getPostTitlesFromDatabase:
+        
+        $conn;
+
+        <?php
+           function getPostTitlesFromDatabase () {
+            // TODO in Module 4
+            // get this data from a database instead of hardcoding it
+            $postTitles = array ("Blog Post #1", "Blog Post #2", "Blog Post #3");
+            return $postTitles;
+           }
+        
         <ul>
         <?php
             $postTitles = getPostTitlesFromDatabase();
