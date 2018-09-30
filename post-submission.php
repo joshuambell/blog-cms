@@ -10,6 +10,10 @@ include 'nav.php';
 include 'header.php';
 ?>
 
+ <?php
+  include 'footer.php';
+?>
+
 
         <!-- Page content -->
         <main>
@@ -42,10 +46,6 @@ include 'header.php';
                              </div>           
                             </section>
                         </main>
-        
-                        <?php
-                          include 'footer.php';
-                          ?>
-                        
+                          
                         </body>
                         </html>
