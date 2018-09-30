@@ -12,6 +12,10 @@ function () {
 }
 ?>
 
+<?php
+  include_once 'db_connect.php';
+?>
+
         <!-- Page content -->
         <main>
                 <div class="w3-content" style="max-width:2000px;margin-top:46px">

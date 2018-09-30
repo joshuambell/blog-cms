@@ -12,8 +12,8 @@ include 'header.php';
       $postTitle = rawurldecode($_GET['title']);
 
       //Get the post that matches the postTitle
-      include_once 'includes/db_connect.php';
-      $sql = "SELECT * FROM posts WHERE title=" .$postTitle . "'";
+      include_once 'db_connect.php';
+      $sql = "SELECT * FROM posts WHERE title='" .$postTitle . "'";
       $result = mysqli_query($conn,$sql);
 
       //Get the first row from the result as an associative array
@@ -22,14 +22,6 @@ include 'header.php';
     }
 ?>
 
-<?php
-      // Post details contains all the data to generate the blog from
-      $postDetails = getPostDetailsFromDatabase();
-?>
-<h1> <?php echo $postDetails["title"]; ?> </h1>
-<div> <?php echo $postDetails["author"]; ?> </div>
-<div> <?php echo $postDetails["date"]; ?> </div>
-<div> <?php echo $postDetails["content"]; ?> </div>
 
 <main>
         <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
