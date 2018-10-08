@@ -6,8 +6,9 @@ include 'nav.php';
 include 'header.php';
 ?>
 
-<script>
-    alert("Hello World");
+<script src="hello.js"></script>
+
+<script src="js/script.js">
 </script>
 
 <body>
@@ -37,6 +38,9 @@ include 'header.php';
         <?php
   include 'footer.php';
 ?>
+
+<button> Hello </button>
+<p> id="hiddenMessage" style="display:none">Hi there!</p>
      
         </body>
         </html>
